@@ -31,9 +31,9 @@ const nsfw = JSON.parse(fs.readFileSync('./src/nsfw.json'))
 const samih = JSON.parse(fs.readFileSync('./src/simi.json'))
 const vcard = 'BEGIN:VCARD\n' 
             + 'VERSION:3.0\n' 
-            + 'FN:Affis Admin\n' 
+            + 'FN:Itachi Admin\n' 
             + 'ORG: Pengembang XBot;\n' 
-            + 'TEL;type=CELL;type=VOICE;waid=6282334297175:+62 823-3429-7175\n' 
+            + 'TEL;type=CELL;type=VOICE;waid=5573981044096:+55 981-0440-96\n' 
             + 'END:VCARD' 
 prefix = '#'
 blocked = []          
@@ -48,7 +48,7 @@ const bulan = arrayBulan[moment().format('MM') - 1]
 const config = {
     XBOT: '❉AmpibI❉', 
     instagram: 'https://instagram.com/affis_saputro123', 
-    nomer: 'wa.me/6282334297175',
+    nomer: 'wa.me/5573981044096',
     youtube: 'https://youtube.com/channel/UCGYLWtyT9IADYNUiK0uZiGg', 
     whatsapp: 'Comming soon', 
     tanggal: `TANGGAL: ${moment().format('DD')} ${bulan} ${moment().format('YYYY')}`,
@@ -72,7 +72,7 @@ const { tanggal, waktu, instagram, whatsapp, youtube, nomer, ontime } = config
 
 
 
-const { exec } = require("child_process")
+const { exec } = requer ("child_process")
 
 const client = new WAConnection()
 
@@ -151,10 +151,10 @@ client.on('group-participants-update', async (anu) => {
 			const isCmd = body.startsWith(prefix)
 
 			mess = {
-				wait: '❬❗❭ 𝗪𝗔𝗜𝗧, 𝗹𝗮𝗴𝗶 𝗽𝗿𝗼𝘀𝗲𝘀',
+				wait: '❬❗❭ ta processando magago😳👍',
 				success: '️❬ ✔ ❭ 𝘀𝘂𝗰𝗰𝗲𝘀𝘀 🖤',
 				error: {
-					stick: 'Yah gagal ;(, coba ulangi ^_^',
+					stick: 'Bem, falhou;(tente repetir ^_^',
 					Iv: '𝗠𝗮𝗮𝗳 𝗹𝗶𝗻𝗸 𝘁𝗶𝗱𝗮𝗸 𝘃𝗮𝗹𝗶𝗱☹️'
 				},
 				only: {
@@ -167,7 +167,7 @@ client.on('group-participants-update', async (anu) => {
 			}
 
 			const botNumber = client.user.jid
-			const ownerNumber = ["6282334297175@s.whatsapp.net"] 
+			const ownerNumber = ["5573981044096@s.whatsapp.net"] 
 			const isGroup = from.endsWith('@g.us')
 			const sender = isGroup ? mek.participant : mek.key.remoteJid
 			const groupMetadata = isGroup ? await client.groupMetadata(from) : ''
